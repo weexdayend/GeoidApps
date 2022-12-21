@@ -1,27 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const initialState = {
     data: [],
+    address: [],
     token: '',
     isLogged: false,
-}
-
-const _store = async (payload) => {
-    try {
-        await AsyncStorage.setItem('_logdata', JSON.stringify(payload.data))
-        await AsyncStorage.setItem('_logtoken', JSON.stringify(payload.token))
-    } catch(e) {
-        console.log(e)
-    }
-}
-
-const _clear = async () => {
-    try {
-        await AsyncStorage.clear()
-    } catch(e) {
-        console.log(e)
-    }
 }
 
 export const profileSlice = createSlice({
@@ -32,13 +15,14 @@ export const profileSlice = createSlice({
             state.data = action.payload.data
             state.token = action.payload.token
             state.isLogged = true
-            _store(action.payload)
+        },
+        addedAddress: (state, action) => {
+            state.address = action.payload.address
         },
         logoutUser: (state) => {
             state.data = []
             state.token = ''
             state.isLogged = false
-            _clear()
         }
     }
 })

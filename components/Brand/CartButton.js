@@ -6,6 +6,8 @@ import { useNavigation } from '@react-navigation/native'
 
 import * as Animatable from 'react-native-animatable'
 import * as Icons from 'react-native-heroicons/solid'
+import Currency from 'react-currency-formatter'
+import { styles } from '../../fontStyles'
 
 import { selectBasketDiscount, selectBasketItems, selectBasketTotal } from '../../reducer/basketSlice'
 import { selectLog } from '../../reducer/profileSlice'
@@ -47,11 +49,11 @@ const CartButton = () => {
   return (
     <Animatable.View 
       ref={viewAnimate} 
-      className='absolute bottom-0 bg-white w-screen h-24 z-50 border-t border-[#009245] justify-center'
+      className={showView === true ? 'absolute bottom-0 bg-white w-screen border-t border-[#009245] justify-center' : 'absolute bottom-0 bg-white w-screen'}
     >
       <View>
         <TouchableOpacity
-          className='bg-[#009245] mx-5 p-4 rounded-full flex-row items-center'
+          className={showView === true ? 'bg-[#009245] mx-4 my-4 mb-8 p-4 rounded-full flex-row items-center' : 'bg-[#009245] mx-4 my-4 p-4 rounded-full flex-row items-center'}
           onPress={() => {
             if(logUser === false){
               navigation.navigate('Login')
@@ -61,13 +63,13 @@ const CartButton = () => {
           }}
         >
           <View className='flex-1 ml-4'>
-            <Text className='text-white font-light text-xs text-left'>Subtotal ({items.length})</Text>
-            <Text className='text-white font-bold text-base text-left'>
-              {basketTotal-basketDiscount}
+            <Text style={styles.Regu} className='text-white text-xs text-left'>Subtotal ({items.length})</Text>
+            <Text style={styles.Bold} className='text-white text-base text-left'>
+              <Currency quantity={basketTotal-basketDiscount} currency="IDR" pattern="##,### " />
             </Text>
           </View>
           <View className='flex-row items-center mr-2'>
-            <Text className='text-white font-medium text-base mr-2'>Keranjang</Text>
+            <Text style={styles.Regu} className='text-white text-base mr-2 leading-4'>Keranjang</Text>
             <Icons.ChevronRightIcon fill={'#ffffff'} />
           </View>
         </TouchableOpacity>

@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import logger from 'redux-logger'
 
 import ProfileReducer from './reducer/profileSlice'
 import BasketReducer from './reducer/basketSlice'
@@ -9,5 +10,6 @@ export const store = configureStore({
         profile: ProfileReducer,
         home: HomeReducer,
         basket: BasketReducer,
-    }
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 })

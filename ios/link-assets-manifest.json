@@ -1,0 +1,181 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/PlusJakartaSans-Bold.ttf",
+      "sha1": "75f2dfa94b8937297a74628c454276a8c1327c57"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-BoldItalic.ttf",
+      "sha1": "b7db367001538df990f78a9875304692b6f3c204"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-ExtraBold.ttf",
+      "sha1": "00eb44967386c94a132e622748b1bd1e9d11f855"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-ExtraBoldItalic.ttf",
+      "sha1": "0e10ec6b99c9bca518384b8e522dc759f746e687"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-ExtraLight.ttf",
+      "sha1": "7186a36b528dcdab01cbf31841dbe395eb204f2e"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-ExtraLightItalic.ttf",
+      "sha1": "4449c60535be741b63392a8c4213cb6a6c699ec9"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-Italic.ttf",
+      "sha1": "d2be63c9f6ede12b04f8ba0be250385c94b3c07c"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-Light.ttf",
+      "sha1": "ae75ae1eb30e7c6f62fd9332e6e129abf4a57804"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-LightItalic.ttf",
+      "sha1": "e0f8189514342c270eead051be3fde96ec3a6baf"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-Medium.ttf",
+      "sha1": "fb1b024b125e02b306437da746f52ee58b4e90db"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-MediumItalic.ttf",
+      "sha1": "ba87b4b5aafc4b2c74cf0bc946c4e617b3a4762f"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-Regular.ttf",
+      "sha1": "868da1777420a2835087306babb1d3ac82056eea"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-SemiBold.ttf",
+      "sha1": "1f999e891d04f6018f8474f06a40a029215bc8c4"
+    },
+    {
+      "path": "assets/fonts/PlusJakartaSans-SemiBoldItalic.ttf",
+      "sha1": "b64fdc6722c847074d8fc085c89381eb5602ab49"
+    },
+    {
+      "path": "assets/img/Asset4.png",
+      "sha1": "a7c024ed0859060c1490113b4f07e135c4f52c13"
+    },
+    {
+      "path": "assets/img/Asset5.png",
+      "sha1": "80bf6f90c0e1256c2e63fff0fe6aa40831894cf2"
+    },
+    {
+      "path": "assets/img/Asset6.png",
+      "sha1": "7258c94edcb42846841d580c33b23b9ea10e8fad"
+    },
+    {
+      "path": "assets/img/Asset7.png",
+      "sha1": "094ecacc59c8334ad26bd194142bed6eeee41f6c"
+    },
+    {
+      "path": "assets/img/Asset8.png",
+      "sha1": "ea7394aba6914ee30dfb759bf408b2fa5ba90ccf"
+    },
+    {
+      "path": "assets/img/icons8-atm-96.png",
+      "sha1": "42c19e86abeae4be9c69aa102b5e6b10d5db4d7b"
+    },
+    {
+      "path": "assets/img/icons8-best-seller-96.png",
+      "sha1": "ae729070d25f491935010c48bf5cd3b88e47b4d5"
+    },
+    {
+      "path": "assets/img/icons8-brand-new-96.png",
+      "sha1": "2fe0030bd5ea48a42cc2744d2d8e564fa367780c"
+    },
+    {
+      "path": "assets/img/icons8-cheque.gif",
+      "sha1": "3d6c59e2a48ba303551a4919eea5c6e6a61f047e"
+    },
+    {
+      "path": "assets/img/icons8-delivery-96.png",
+      "sha1": "b5ee71447303ab89ff5547af34b238a788b8bb8d"
+    },
+    {
+      "path": "assets/img/icons8-discount-96.png",
+      "sha1": "a234a3f07b6e5c924c533974148da1328940ada0"
+    },
+    {
+      "path": "assets/img/icons8-gift-96.png",
+      "sha1": "8ae06331348364642eaf84adbf64e465da3545b6"
+    },
+    {
+      "path": "assets/img/icons8-in-transit-96.png",
+      "sha1": "1076d77996ba8c23dfedeaf222322c1a0e5e9411"
+    },
+    {
+      "path": "assets/img/icons8-manual-handling-96.png",
+      "sha1": "05c3cb73308ac9b45d00cb854293dea5f983ac20"
+    },
+    {
+      "path": "assets/img/icons8-online-payment-with-a-credit-card-96.png",
+      "sha1": "f57baa93acaa1d95d9dab2cdbfa8936c3a2cf5aa"
+    },
+    {
+      "path": "assets/img/icons8-open-box-96.png",
+      "sha1": "69aded4746de26342c8f7022c4f42444d92edab3"
+    },
+    {
+      "path": "assets/img/icons8-packaging-96.png",
+      "sha1": "2ef2af3acd10be0180166e02f68f4241425a0621"
+    },
+    {
+      "path": "assets/img/icons8-receipt-96.png",
+      "sha1": "5731253d781e61fd3a240c05370e039508905f21"
+    },
+    {
+      "path": "assets/img/icons8-redeem-96.png",
+      "sha1": "14349e31c1cd883b03f3e9d7dc82f7eb37afce3e"
+    },
+    {
+      "path": "assets/img/icons8-shipped-96.png",
+      "sha1": "46d59f0dfce655f975c7d0f4238484fa4c950960"
+    },
+    {
+      "path": "assets/img/icons8-trolley-96.png",
+      "sha1": "28124c71d1d76dd099d20eeaf01ea9e38ff38435"
+    },
+    {
+      "path": "assets/img/large-triangles.png",
+      "sha1": "dd1347a15dbc8b645a4baec81eb1f941c6d45721"
+    },
+    {
+      "path": "assets/img/sammy-26.png",
+      "sha1": "276bd370444af30b5d74aec951d83a4e4e6b6dfc"
+    },
+    {
+      "path": "assets/img/sammy-38.png",
+      "sha1": "8d9a158981e5f38e1444f0f5ceb64dfad5bd9916"
+    },
+    {
+      "path": "assets/img/sammy-43.png",
+      "sha1": "e1b1d833a6c6fcb5b10762e1046f131dc38b5ece"
+    },
+    {
+      "path": "assets/img/sammy-delivery-with-gps-navigation.png",
+      "sha1": "634d8fec4c99e9e10a4b95f21119923945c13c3e"
+    },
+    {
+      "path": "assets/img/sammy-done.png",
+      "sha1": "5d918ebf004141c8a4695e7a29be2cba53f0b14e"
+    },
+    {
+      "path": "assets/img/sammy-man-delivering-package-to-woman.png",
+      "sha1": "6a4a45248cda72f513641b2797c6f219f8eb987c"
+    },
+    {
+      "path": "assets/img/sammy-packages.png",
+      "sha1": "999acffa154f5eedac386eeb92c217cb8dd3c87e"
+    },
+    {
+      "path": "assets/img/sammy-shopping.gif",
+      "sha1": "f4bbcd0790673c3aa2a3c0cb64592e16b43fa3f2"
+    }
+  ]
+}

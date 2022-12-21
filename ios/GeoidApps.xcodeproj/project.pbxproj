@@ -7,13 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DB982E842748D7B7110456 /* sammy-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD65D76EC0E4E9EAEB70F5B /* sammy-26.png */; };
 		00E356F31AD99517003FC87E /* GeoidAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GeoidAppsTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-GeoidApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-GeoidApps.a */; };
+		0107D3B8018A4C729AEC449C /* Asset7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C986C917FF3431391A39E98 /* Asset7.png */; };
+		02AEC2CF5FAA4BF4980D76CA /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC7ADA14604116BEBC4CBF /* PlusJakartaSans-ExtraBold.ttf */; };
+		061EC213DD3B4C79924F2E47 /* icons8-gift-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0093F8A1C74C6EBF9571FA /* icons8-gift-96.png */; };
+		08DD45DE941C4E678B4E13DD /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4800C56F15B540F2867F9D90 /* PlusJakartaSans-SemiBoldItalic.ttf */; };
+		0C80B921A6F3F58F76C31292 /* libPods-GeoidApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-GeoidApps.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		13D15CF6C8714083B23E13F3 /* Asset5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4EA23556448E95B321D4 /* Asset5.png */; };
+		1872171A291B059B00CA35FF /* hermes.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AAF50A291AF58500F5A862 /* hermes.xcframework */; };
+		20891D73FBFA4F69A7AEEEB1 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F12EEF7997F74F8184F86E75 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
+		235A79D994594C7FA8524EF4 /* icons8-redeem-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 16F7058F35DD488AA5E47B37 /* icons8-redeem-96.png */; };
+		284B647F2D8E49BDA6B495F1 /* icons8-manual-handling-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0ECE51B35641BF93A9A26F /* icons8-manual-handling-96.png */; };
+		2D8048E2353F4AA78BDA0E45 /* icons8-atm-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 865A6D54E91A4AB5823957B9 /* icons8-atm-96.png */; };
+		2E37AA7EE889431E881BBF4F /* Asset8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4490EB2A4A984EEEA7308F26 /* Asset8.png */; };
+		30DDC0C73B4A44679CB6085F /* Asset4.png in Resources */ = {isa = PBXBuildFile; fileRef = E95F6D5D9C1445569E0FE957 /* Asset4.png */; };
+		31B8162C372E4026BFBF7A23 /* PlusJakartaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C620082204B868150791C /* PlusJakartaSans-BoldItalic.ttf */; };
+		36F0E0BDD5BF48DF888B07D6 /* icons8-open-box-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FEC871883694CEFB74ECAD3 /* icons8-open-box-96.png */; };
+		46CF9EFE197E456EB0F33389 /* PlusJakartaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26B49BD4C8914ECFBC87F8BD /* PlusJakartaSans-MediumItalic.ttf */; };
+		46E120A47FB748669BC8B1FE /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BC123CFDE1B4366931542D1 /* PlusJakartaSans-ExtraLightItalic.ttf */; };
+		47ACFE392FFE4477877242CD /* icons8-online-payment-with-a-credit-card-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 85B0BEA1E62846FBA8240339 /* icons8-online-payment-with-a-credit-card-96.png */; };
+		535EB24FE8AD4EF6B6A902AB /* icons8-delivery-96.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1F87E4944343E79E41CDBE /* icons8-delivery-96.png */; };
+		57633509DAFD4B839EBF0AA9 /* PlusJakartaSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 287769AC72FE47558E76E7FF /* PlusJakartaSans-Italic.ttf */; };
+		598DB0C007474AEDA3C77F68 /* icons8-packaging-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A03EBB0B9314F3EA7877317 /* icons8-packaging-96.png */; };
+		60BE9C6BE7574968973116F4 /* Asset6.png in Resources */ = {isa = PBXBuildFile; fileRef = 718DC043A874405592E602F4 /* Asset6.png */; };
+		669864F153B84F1D9C9A671D /* large-triangles.png in Resources */ = {isa = PBXBuildFile; fileRef = 3802DB61AEF149DE97C60DF1 /* large-triangles.png */; };
+		70E5EF63B108434DAD4A40FB /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE20ECD7643F09C90771F /* PlusJakartaSans-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-GeoidApps-GeoidAppsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-GeoidApps-GeoidAppsTests.a */; };
+		7D14831A329040009DA5D4E3 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0416639CBA948A3A9AA3BE1 /* PlusJakartaSans-SemiBold.ttf */; };
+		80F5B516F8B94742BD36C1F3 /* icons8-receipt-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F8E9329AB45477AB2A06405 /* icons8-receipt-96.png */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8520E9F1A71243CCA5B50C9B /* sammy-done.png in Resources */ = {isa = PBXBuildFile; fileRef = 78F6C9E6C4744E02BEF5440F /* sammy-done.png */; };
+		943AA70BDE7D4418AF657012 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E4E7DA1C1424B4A9B790DCA /* PlusJakartaSans-ExtraLight.ttf */; };
+		997C40E0DA744C4C84E68900 /* sammy-delivery-with-gps-navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = E062D6441F3C41A5B869B662 /* sammy-delivery-with-gps-navigation.png */; };
+		9B071A9CCBA34E46B07EDA2E /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C7AD24D5806480EA3A9FC9D /* PlusJakartaSans-Medium.ttf */; };
+		AF03BAD2A745406BBA18FA3A /* sammy-man-delivering-package-to-woman.png in Resources */ = {isa = PBXBuildFile; fileRef = C889952668174686944A22E8 /* sammy-man-delivering-package-to-woman.png */; };
+		B0365CE03A61494EB6A1CA80 /* icons8-shipped-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D095BCB2A6D4696B15E3C89 /* icons8-shipped-96.png */; };
+		B2B2D5F47F354DEBB7B86FBA /* sammy-packages.png in Resources */ = {isa = PBXBuildFile; fileRef = 28303B6E1D3D4707914A53FD /* sammy-packages.png */; };
+		B2D964364E3545ECBC05FAB1 /* sammy-shopping.gif in Resources */ = {isa = PBXBuildFile; fileRef = E2426CF5F45442C0B6D0552F /* sammy-shopping.gif */; };
+		B46DB6528F2149EE9E892D72 /* icons8-cheque.gif in Resources */ = {isa = PBXBuildFile; fileRef = D5BCE3E5F0DD4502B59703F0 /* icons8-cheque.gif */; };
+		B4D85C2066064551B256F25C /* icons8-trolley-96.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E0E3D2B5C94696826A4EC2 /* icons8-trolley-96.png */; };
+		B9F8BD7B167742448FCB91A5 /* sammy-43.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF63F4F327A4436B1E3BF64 /* sammy-43.png */; };
+		C47630345E2240FFA96BEE6D /* PlusJakartaSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9054EC85E30147CAB26F055D /* PlusJakartaSans-LightItalic.ttf */; };
+		CFC0EF3F7D364CBDA6E1934D /* icons8-best-seller-96.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6E6B79FC1641D18AE4CF6F /* icons8-best-seller-96.png */; };
+		D658D5EC30114EB5B92E7BD3 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA2D6B74E580492794E52381 /* PlusJakartaSans-Regular.ttf */; };
+		DF7FED7E8F9348799C17D9FD /* sammy-38.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3C57D95B8C4279899BF333 /* sammy-38.png */; };
+		DFC11C0CCCBE4AD2B212E0D6 /* icons8-in-transit-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 290EF2FCD27941D583C3A4E3 /* icons8-in-transit-96.png */; };
+		E593631E56AA477DB5B9FFAE /* icons8-discount-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FE1A30C271F48F0998C33AB /* icons8-discount-96.png */; };
+		F105A54D471C4B0ABCA3971B /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 814B28495FAE4B57919CAB55 /* PlusJakartaSans-Light.ttf */; };
+		FCBFA89668CC4886B2193535 /* icons8-brand-new-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 310A869E261541B5BB5ECBF8 /* icons8-brand-new-96.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +75,67 @@
 		00E356EE1AD99517003FC87E /* GeoidAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoidAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GeoidAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoidAppsTests.m; sourceTree = "<group>"; };
+		0FEC871883694CEFB74ECAD3 /* icons8-open-box-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-open-box-96.png"; path = "../assets/img/icons8-open-box-96.png"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GeoidApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoidApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GeoidApps/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = GeoidApps/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GeoidApps/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeoidApps/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GeoidApps/main.m; sourceTree = "<group>"; };
+		16F7058F35DD488AA5E47B37 /* icons8-redeem-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-redeem-96.png"; path = "../assets/img/icons8-redeem-96.png"; sourceTree = "<group>"; };
+		18AAF508291AF56700F5A862 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		18AAF50A291AF58500F5A862 /* hermes.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = hermes.xcframework; path = "Pods/hermes-engine/destroot/Library/Frameworks/universal/hermes.xcframework"; sourceTree = "<group>"; };
+		18AAF50C291AF59000F5A862 /* libReact-hermes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-hermes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-GeoidApps-GeoidAppsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoidApps-GeoidAppsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0093F8A1C74C6EBF9571FA /* icons8-gift-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-gift-96.png"; path = "../assets/img/icons8-gift-96.png"; sourceTree = "<group>"; };
+		1C986C917FF3431391A39E98 /* Asset7.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Asset7.png; path = ../assets/img/Asset7.png; sourceTree = "<group>"; };
+		1DEC7ADA14604116BEBC4CBF /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-ExtraBold.ttf"; path = "../assets/fonts/PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		1E4E7DA1C1424B4A9B790DCA /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-ExtraLight.ttf"; path = "../assets/fonts/PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		1FD65D76EC0E4E9EAEB70F5B /* sammy-26.png */ = {isa = PBXFileReference; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = image.png; name = "sammy-26.png"; path = "../assets/img/sammy-26.png"; sourceTree = "<group>"; };
+		26B49BD4C8914ECFBC87F8BD /* PlusJakartaSans-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-MediumItalic.ttf"; path = "../assets/fonts/PlusJakartaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		28303B6E1D3D4707914A53FD /* sammy-packages.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-packages.png"; path = "../assets/img/sammy-packages.png"; sourceTree = "<group>"; };
+		287769AC72FE47558E76E7FF /* PlusJakartaSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Italic.ttf"; path = "../assets/fonts/PlusJakartaSans-Italic.ttf"; sourceTree = "<group>"; };
+		290EF2FCD27941D583C3A4E3 /* icons8-in-transit-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-in-transit-96.png"; path = "../assets/img/icons8-in-transit-96.png"; sourceTree = "<group>"; };
+		310A869E261541B5BB5ECBF8 /* icons8-brand-new-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-brand-new-96.png"; path = "../assets/img/icons8-brand-new-96.png"; sourceTree = "<group>"; };
+		3802DB61AEF149DE97C60DF1 /* large-triangles.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "large-triangles.png"; path = "../assets/img/large-triangles.png"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-GeoidApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoidApps.debug.xcconfig"; path = "Target Support Files/Pods-GeoidApps/Pods-GeoidApps.debug.xcconfig"; sourceTree = "<group>"; };
+		4490EB2A4A984EEEA7308F26 /* Asset8.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Asset8.png; path = ../assets/img/Asset8.png; sourceTree = "<group>"; };
+		4800C56F15B540F2867F9D90 /* PlusJakartaSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-SemiBoldItalic.ttf"; path = "../assets/fonts/PlusJakartaSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4DF63F4F327A4436B1E3BF64 /* sammy-43.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-43.png"; path = "../assets/img/sammy-43.png"; sourceTree = "<group>"; };
+		4E0ECE51B35641BF93A9A26F /* icons8-manual-handling-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-manual-handling-96.png"; path = "../assets/img/icons8-manual-handling-96.png"; sourceTree = "<group>"; };
+		55BCE20ECD7643F09C90771F /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Bold.ttf"; path = "../assets/fonts/PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-GeoidApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoidApps.release.xcconfig"; path = "Target Support Files/Pods-GeoidApps/Pods-GeoidApps.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-GeoidApps-GeoidAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoidApps-GeoidAppsTests.debug.xcconfig"; path = "Target Support Files/Pods-GeoidApps-GeoidAppsTests/Pods-GeoidApps-GeoidAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-GeoidApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoidApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1C620082204B868150791C /* PlusJakartaSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-BoldItalic.ttf"; path = "../assets/fonts/PlusJakartaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5F8E9329AB45477AB2A06405 /* icons8-receipt-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-receipt-96.png"; path = "../assets/img/icons8-receipt-96.png"; sourceTree = "<group>"; };
+		6A03EBB0B9314F3EA7877317 /* icons8-packaging-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-packaging-96.png"; path = "../assets/img/icons8-packaging-96.png"; sourceTree = "<group>"; };
+		6FE1A30C271F48F0998C33AB /* icons8-discount-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-discount-96.png"; path = "../assets/img/icons8-discount-96.png"; sourceTree = "<group>"; };
+		718DC043A874405592E602F4 /* Asset6.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Asset6.png; path = ../assets/img/Asset6.png; sourceTree = "<group>"; };
+		78F6C9E6C4744E02BEF5440F /* sammy-done.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-done.png"; path = "../assets/img/sammy-done.png"; sourceTree = "<group>"; };
+		7AEE4EA23556448E95B321D4 /* Asset5.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Asset5.png; path = ../assets/img/Asset5.png; sourceTree = "<group>"; };
+		7BC123CFDE1B4366931542D1 /* PlusJakartaSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-ExtraLightItalic.ttf"; path = "../assets/fonts/PlusJakartaSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		7C7AD24D5806480EA3A9FC9D /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Medium.ttf"; path = "../assets/fonts/PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		814B28495FAE4B57919CAB55 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Light.ttf"; path = "../assets/fonts/PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GeoidApps/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85B0BEA1E62846FBA8240339 /* icons8-online-payment-with-a-credit-card-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-online-payment-with-a-credit-card-96.png"; path = "../assets/img/icons8-online-payment-with-a-credit-card-96.png"; sourceTree = "<group>"; };
+		865A6D54E91A4AB5823957B9 /* icons8-atm-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-atm-96.png"; path = "../assets/img/icons8-atm-96.png"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-GeoidApps-GeoidAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoidApps-GeoidAppsTests.release.xcconfig"; path = "Target Support Files/Pods-GeoidApps-GeoidAppsTests/Pods-GeoidApps-GeoidAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		9054EC85E30147CAB26F055D /* PlusJakartaSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-LightItalic.ttf"; path = "../assets/fonts/PlusJakartaSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		9D095BCB2A6D4696B15E3C89 /* icons8-shipped-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-shipped-96.png"; path = "../assets/img/icons8-shipped-96.png"; sourceTree = "<group>"; };
+		9F3C57D95B8C4279899BF333 /* sammy-38.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-38.png"; path = "../assets/img/sammy-38.png"; sourceTree = "<group>"; };
+		A0416639CBA948A3A9AA3BE1 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-SemiBold.ttf"; path = "../assets/fonts/PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A4E0E3D2B5C94696826A4EC2 /* icons8-trolley-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-trolley-96.png"; path = "../assets/img/icons8-trolley-96.png"; sourceTree = "<group>"; };
+		BA1F87E4944343E79E41CDBE /* icons8-delivery-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-delivery-96.png"; path = "../assets/img/icons8-delivery-96.png"; sourceTree = "<group>"; };
+		C889952668174686944A22E8 /* sammy-man-delivering-package-to-woman.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-man-delivering-package-to-woman.png"; path = "../assets/img/sammy-man-delivering-package-to-woman.png"; sourceTree = "<group>"; };
+		CA2D6B74E580492794E52381 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-Regular.ttf"; path = "../assets/fonts/PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		D5BCE3E5F0DD4502B59703F0 /* icons8-cheque.gif */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-cheque.gif"; path = "../assets/img/icons8-cheque.gif"; sourceTree = "<group>"; };
+		E062D6441F3C41A5B869B662 /* sammy-delivery-with-gps-navigation.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-delivery-with-gps-navigation.png"; path = "../assets/img/sammy-delivery-with-gps-navigation.png"; sourceTree = "<group>"; };
+		E2426CF5F45442C0B6D0552F /* sammy-shopping.gif */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "sammy-shopping.gif"; path = "../assets/img/sammy-shopping.gif"; sourceTree = "<group>"; };
+		E95F6D5D9C1445569E0FE957 /* Asset4.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Asset4.png; path = ../assets/img/Asset4.png; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F12EEF7997F74F8184F86E75 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PlusJakartaSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FE6E6B79FC1641D18AE4CF6F /* icons8-best-seller-96.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "icons8-best-seller-96.png"; path = "../assets/img/icons8-best-seller-96.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1872171A291B059B00CA35FF /* hermes.xcframework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-GeoidApps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,11 +192,65 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18AAF50C291AF59000F5A862 /* libReact-hermes.a */,
+				18AAF50A291AF58500F5A862 /* hermes.xcframework */,
+				18AAF508291AF56700F5A862 /* AdServices.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-GeoidApps.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-GeoidApps-GeoidAppsTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		604F8D84E5FE4EA3B3B2BA43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55BCE20ECD7643F09C90771F /* PlusJakartaSans-Bold.ttf */,
+				5F1C620082204B868150791C /* PlusJakartaSans-BoldItalic.ttf */,
+				1DEC7ADA14604116BEBC4CBF /* PlusJakartaSans-ExtraBold.ttf */,
+				F12EEF7997F74F8184F86E75 /* PlusJakartaSans-ExtraBoldItalic.ttf */,
+				1E4E7DA1C1424B4A9B790DCA /* PlusJakartaSans-ExtraLight.ttf */,
+				7BC123CFDE1B4366931542D1 /* PlusJakartaSans-ExtraLightItalic.ttf */,
+				287769AC72FE47558E76E7FF /* PlusJakartaSans-Italic.ttf */,
+				814B28495FAE4B57919CAB55 /* PlusJakartaSans-Light.ttf */,
+				9054EC85E30147CAB26F055D /* PlusJakartaSans-LightItalic.ttf */,
+				7C7AD24D5806480EA3A9FC9D /* PlusJakartaSans-Medium.ttf */,
+				26B49BD4C8914ECFBC87F8BD /* PlusJakartaSans-MediumItalic.ttf */,
+				CA2D6B74E580492794E52381 /* PlusJakartaSans-Regular.ttf */,
+				A0416639CBA948A3A9AA3BE1 /* PlusJakartaSans-SemiBold.ttf */,
+				4800C56F15B540F2867F9D90 /* PlusJakartaSans-SemiBoldItalic.ttf */,
+				3802DB61AEF149DE97C60DF1 /* large-triangles.png */,
+				1FD65D76EC0E4E9EAEB70F5B /* sammy-26.png */,
+				9F3C57D95B8C4279899BF333 /* sammy-38.png */,
+				4DF63F4F327A4436B1E3BF64 /* sammy-43.png */,
+				E062D6441F3C41A5B869B662 /* sammy-delivery-with-gps-navigation.png */,
+				78F6C9E6C4744E02BEF5440F /* sammy-done.png */,
+				C889952668174686944A22E8 /* sammy-man-delivering-package-to-woman.png */,
+				28303B6E1D3D4707914A53FD /* sammy-packages.png */,
+				E2426CF5F45442C0B6D0552F /* sammy-shopping.gif */,
+				865A6D54E91A4AB5823957B9 /* icons8-atm-96.png */,
+				FE6E6B79FC1641D18AE4CF6F /* icons8-best-seller-96.png */,
+				310A869E261541B5BB5ECBF8 /* icons8-brand-new-96.png */,
+				D5BCE3E5F0DD4502B59703F0 /* icons8-cheque.gif */,
+				BA1F87E4944343E79E41CDBE /* icons8-delivery-96.png */,
+				6FE1A30C271F48F0998C33AB /* icons8-discount-96.png */,
+				1A0093F8A1C74C6EBF9571FA /* icons8-gift-96.png */,
+				4E0ECE51B35641BF93A9A26F /* icons8-manual-handling-96.png */,
+				85B0BEA1E62846FBA8240339 /* icons8-online-payment-with-a-credit-card-96.png */,
+				0FEC871883694CEFB74ECAD3 /* icons8-open-box-96.png */,
+				9D095BCB2A6D4696B15E3C89 /* icons8-shipped-96.png */,
+				A4E0E3D2B5C94696826A4EC2 /* icons8-trolley-96.png */,
+				290EF2FCD27941D583C3A4E3 /* icons8-in-transit-96.png */,
+				6A03EBB0B9314F3EA7877317 /* icons8-packaging-96.png */,
+				5F8E9329AB45477AB2A06405 /* icons8-receipt-96.png */,
+				16F7058F35DD488AA5E47B37 /* icons8-redeem-96.png */,
+				E95F6D5D9C1445569E0FE957 /* Asset4.png */,
+				7AEE4EA23556448E95B321D4 /* Asset5.png */,
+				718DC043A874405592E602F4 /* Asset6.png */,
+				1C986C917FF3431391A39E98 /* Asset7.png */,
+				4490EB2A4A984EEEA7308F26 /* Asset8.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -122,6 +269,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				604F8D84E5FE4EA3B3B2BA43 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +392,50 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				70E5EF63B108434DAD4A40FB /* PlusJakartaSans-Bold.ttf in Resources */,
+				31B8162C372E4026BFBF7A23 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
+				02AEC2CF5FAA4BF4980D76CA /* PlusJakartaSans-ExtraBold.ttf in Resources */,
+				20891D73FBFA4F69A7AEEEB1 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */,
+				943AA70BDE7D4418AF657012 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
+				46E120A47FB748669BC8B1FE /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */,
+				57633509DAFD4B839EBF0AA9 /* PlusJakartaSans-Italic.ttf in Resources */,
+				F105A54D471C4B0ABCA3971B /* PlusJakartaSans-Light.ttf in Resources */,
+				C47630345E2240FFA96BEE6D /* PlusJakartaSans-LightItalic.ttf in Resources */,
+				9B071A9CCBA34E46B07EDA2E /* PlusJakartaSans-Medium.ttf in Resources */,
+				46CF9EFE197E456EB0F33389 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
+				D658D5EC30114EB5B92E7BD3 /* PlusJakartaSans-Regular.ttf in Resources */,
+				7D14831A329040009DA5D4E3 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				08DD45DE941C4E678B4E13DD /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
+				669864F153B84F1D9C9A671D /* large-triangles.png in Resources */,
+				00DB982E842748D7B7110456 /* sammy-26.png in Resources */,
+				DF7FED7E8F9348799C17D9FD /* sammy-38.png in Resources */,
+				B9F8BD7B167742448FCB91A5 /* sammy-43.png in Resources */,
+				997C40E0DA744C4C84E68900 /* sammy-delivery-with-gps-navigation.png in Resources */,
+				8520E9F1A71243CCA5B50C9B /* sammy-done.png in Resources */,
+				AF03BAD2A745406BBA18FA3A /* sammy-man-delivering-package-to-woman.png in Resources */,
+				B2B2D5F47F354DEBB7B86FBA /* sammy-packages.png in Resources */,
+				B2D964364E3545ECBC05FAB1 /* sammy-shopping.gif in Resources */,
+				2D8048E2353F4AA78BDA0E45 /* icons8-atm-96.png in Resources */,
+				CFC0EF3F7D364CBDA6E1934D /* icons8-best-seller-96.png in Resources */,
+				FCBFA89668CC4886B2193535 /* icons8-brand-new-96.png in Resources */,
+				B46DB6528F2149EE9E892D72 /* icons8-cheque.gif in Resources */,
+				535EB24FE8AD4EF6B6A902AB /* icons8-delivery-96.png in Resources */,
+				E593631E56AA477DB5B9FFAE /* icons8-discount-96.png in Resources */,
+				061EC213DD3B4C79924F2E47 /* icons8-gift-96.png in Resources */,
+				284B647F2D8E49BDA6B495F1 /* icons8-manual-handling-96.png in Resources */,
+				47ACFE392FFE4477877242CD /* icons8-online-payment-with-a-credit-card-96.png in Resources */,
+				36F0E0BDD5BF48DF888B07D6 /* icons8-open-box-96.png in Resources */,
+				B0365CE03A61494EB6A1CA80 /* icons8-shipped-96.png in Resources */,
+				B4D85C2066064551B256F25C /* icons8-trolley-96.png in Resources */,
+				DFC11C0CCCBE4AD2B212E0D6 /* icons8-in-transit-96.png in Resources */,
+				598DB0C007474AEDA3C77F68 /* icons8-packaging-96.png in Resources */,
+				80F5B516F8B94742BD36C1F3 /* icons8-receipt-96.png in Resources */,
+				235A79D994594C7FA8524EF4 /* icons8-redeem-96.png in Resources */,
+				30DDC0C73B4A44679CB6085F /* Asset4.png in Resources */,
+				13D15CF6C8714083B23E13F3 /* Asset5.png in Resources */,
+				60BE9C6BE7574968973116F4 /* Asset6.png in Resources */,
+				0107D3B8018A4C729AEC449C /* Asset7.png in Resources */,
+				2E37AA7EE889431E881BBF4F /* Asset8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +754,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -596,6 +788,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -633,7 +826,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -659,6 +852,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
