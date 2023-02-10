@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { loggedUser, selectLog } from '../reducer/profileSlice'
+import { loggedUser, selectLog, selectToken } from '../reducer/profileSlice'
 
 import { styles } from '../fontStyles'
 import * as Icons from 'react-native-heroicons/outline'
@@ -15,8 +15,14 @@ import PromoCard from '../components/Home/PromoCard'
 import CategoryRow from '../components/Home/CategoryRow'
 import SectionRow from '../components/Home/SectionRow'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { retrieveFromDB, selectCartItems } from '../reducer/cartSlice'
+import { UseGetCart } from '../components/Hooks/cartSystem'
+import { UseGetGet } from '../components/Hooks/getHistory'
 
 const HomeScreen = () => {
+
+  const token = useSelector(selectToken)
+  const { data, isSuccess } = UseGetCart(token)
 
   let offset = useRef(new Animated.Value(0)).current;
 
@@ -33,6 +39,21 @@ const HomeScreen = () => {
       })
     }
   }, [])
+
+  useEffect(() => {
+    let tmpData = null
+    if(isSuccess){
+      tmpData = data
+      if(tmpData){
+        tmpData.map((item) => 
+          delete item.productImage
+        )
+        dispatch(retrieveFromDB(tmpData))
+      } else {
+        dispatch(retrieveFromDB([]))
+      }
+    }
+  }, [data])
 
   return (
     <View className='w-screen bg-white'>

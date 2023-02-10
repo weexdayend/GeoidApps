@@ -6,13 +6,13 @@ import { styles } from '../fontStyles'
 
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectAddress, setAddress } from '../reducer/basketSlice'
 
 import { UseGetUserAddress } from '../components/Hooks/getUserAddress'
 import { selectToken, selectProfile } from '../reducer/profileSlice'
+import { retrieveAddress, selectAddress } from '../reducer/cartSlice'
 
 const AddressScreen = () => {
-
+  
   const profile = useSelector(selectProfile)
   const token = useSelector(selectToken)
   const address = useSelector(selectAddress)
@@ -23,7 +23,7 @@ const AddressScreen = () => {
   const dispatch = useDispatch()
 
   const handleChoose = (id, name, detail, area, code, city) => {
-    dispatch(setAddress({id, name, detail, area, code, city}))
+    dispatch(retrieveAddress({id, name, detail, area, code, city}))
     navigation.goBack()
   }
 
@@ -45,7 +45,12 @@ const AddressScreen = () => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView className='w-screen h-screen bg-gray-100'>
+      <ScrollView
+        contentContainerStyle={{
+          paddingBottom: 150
+        }}
+        className='w-screen h-screen bg-gray-100'
+      >
         <View className='p-4 mt-2'>
           {
             loadAsh ? (

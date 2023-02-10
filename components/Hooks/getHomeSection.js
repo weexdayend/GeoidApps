@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
+import { BASE_URL } from './HooksHelper'
 
-const homeSectionUrl = 'https://geoid-dev.taktikid.com/api/products/section'
 const getHomeSection = async () => {
-    const response = await fetch(homeSectionUrl, {
+    const response = await fetch(`${BASE_URL}/products/section`, {
         method: 'GET',
     }).then((response) => response.json()).then(({data}) => {
         return data

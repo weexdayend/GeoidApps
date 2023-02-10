@@ -1,15 +1,16 @@
-import { View, Text, Image, TouchableOpacity, Alert } from 'react-native'
+import { View, Text, Image, TouchableOpacity, Alert, ActivityIndicator } from 'react-native'
 import React from 'react'
 
-import { useDispatch, useSelector } from 'react-redux'
-import { addToBasket, removeFromBasket, selectBasketWithID } from '../../reducer/basketSlice'
+import { useSelector } from 'react-redux'
 
 import * as Icons from 'react-native-heroicons/solid'
 import Currency from 'react-currency-formatter'
 import { styles } from '../../fontStyles'
-import { UseAddCart, UseDeleteCart } from '../Hooks/cartSystem'
+
+import { UseAddCart, UseDeleteCart, UseGetCart } from '../Hooks/cartSystem'
 import { selectToken } from '../../reducer/profileSlice'
 import { useNavigation } from '@react-navigation/native'
+import { selectCartItemsID } from '../../reducer/cartSlice'
 
 const ProductCard = ({
   id, type, name, description, image, unit, price, discount
@@ -17,12 +18,13 @@ const ProductCard = ({
 
   const navigation = useNavigation()
 
-  const items = useSelector((state) => selectBasketWithID(state, id))
-  const dispatch = useDispatch()
+  // const items = useSelector((state) => selectBasketWithID(state, id))
+  const items = useSelector((state) => selectCartItemsID(state, id))
   const token = useSelector(selectToken)
 
-  const { addItem } = UseAddCart()
-  const { deleteItem } = UseDeleteCart()
+  const { isRefetching, data } = UseGetCart(token)
+  const { addItem, statusAdd } = UseAddCart()
+  const { deleteItem, statusDelete } = UseDeleteCart()
 
   const alert = () => {
     Alert.alert(
@@ -30,9 +32,8 @@ const ProductCard = ({
       "Login terlebih dahulu yuk, sebelum lanjut menggunakan GEOID.",
       [
         {
-          text: 'Login',
+          text: 'Login dulu ya!',
           style: 'default',
-          onPress: () => navigation.navigate('Login')
         }
       ]
     )
@@ -44,12 +45,67 @@ const ProductCard = ({
     }
 
     addItem({id, type, token})
-    dispatch(addToBasket({id, name, description, image, unit, price, discount}))
   }
 
   const removeFromCart = (id, type) => {
     deleteItem({id, type, token})
-    dispatch(removeFromBasket({id}))
+  }
+
+  const RenderProcess = () => {
+    return (
+      <View className='flex-row bg-green-50 items-center w-32 py-1 px-1.5 rounded-full border border-[#009245]'>
+        <ActivityIndicator className='p-1' size="small" color="#009245" />
+      </View>
+    )
+  }
+
+  const RenderButton = () => {
+    return (
+      <>
+      {
+        items.length == 0 ?
+        (
+          <>
+          {
+            statusAdd == 'loading' || statusDelete == 'loading' ?
+            <RenderProcess /> :
+            <View className='items-center'>
+              <TouchableOpacity 
+                onPress={() => insertToCart(id, type)}
+                className='w-32 px-3 py-2 items-center rounded-full bg-green-50 border border-[#009245]'
+              >
+                <Text style={styles.Semi} className='text-[#009245] text-base'>Tambah</Text>
+              </TouchableOpacity>
+            </View>
+          }
+          </>
+        ) :
+        (
+          <>
+          {
+            statusAdd == 'loading' || statusDelete == 'loading' ?
+            <RenderProcess /> :
+            <View className='flex-row bg-green-50 items-center w-32 py-1 px-1.5 rounded-full border border-[#009245]'>
+              <TouchableOpacity
+                onPress={() => removeFromCart(id, type)}
+                className='p-1 rounded-full bg-[#009245]'
+              >
+                <Icons.MinusIcon fill={'#ffffff'} />
+              </TouchableOpacity>
+              <Text style={styles.Semi} className='flex-1 text-center text-base'>{items.map(i => i.productItem)}</Text>
+              <TouchableOpacity
+                onPress={() => insertToCart(id, type)}
+                className='p-1 rounded-full bg-[#009245]'
+              >
+                <Icons.PlusIcon fill={'#ffffff'} />
+              </TouchableOpacity>
+            </View>
+          }
+          </>
+        )
+      }
+      </>
+    )
   }
 
   return (
@@ -118,32 +174,7 @@ const ProductCard = ({
                 <Text style={styles.Semi} className='text-[#009245] text-base'>Tambah</Text>
               </TouchableOpacity>
             </View> */}
-            {
-              items.length == 0 ?
-              <View className='items-center'>
-                <TouchableOpacity 
-                  onPress={() => insertToCart(id, type)}
-                  className='w-32 px-3 py-2 items-center rounded-full bg-green-50 border border-[#009245]'
-                >
-                  <Text style={styles.Semi} className='text-[#009245] text-base'>Tambah</Text>
-                </TouchableOpacity>
-              </View> :
-              <View className='flex-row bg-green-50 items-center w-32 py-1 px-1.5 rounded-full border border-[#009245]'>
-                <TouchableOpacity
-                  onPress={() => removeFromCart(id, type)}
-                  className='p-1 rounded-full bg-[#009245]'
-                >
-                  <Icons.MinusIcon fill={'#ffffff'} />
-                </TouchableOpacity>
-                <Text style={styles.Semi} className='flex-1 text-center text-base'>{items.length}</Text>
-                <TouchableOpacity
-                  onPress={() => insertToCart(id, type)}
-                  className='p-1 rounded-full bg-[#009245]'
-                >
-                  <Icons.PlusIcon fill={'#ffffff'} />
-                </TouchableOpacity>
-              </View>
-            }
+            <RenderButton />
           </View>
       </View>
     </View>

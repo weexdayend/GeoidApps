@@ -6,29 +6,19 @@ import { styles } from '../fontStyles'
 
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
-import { setPayment, selectPayment } from '../reducer/basketSlice'
-
-const PaymentData = [
-  {
-    id: 1,
-    paymentName: 'Cash on Delivery',
-  }, 
-  {
-    id: 2,
-    paymentName: 'Transfer to Virtual Account',
-  }
-]
+import { UseGetPayments } from '../components/Hooks/getPayments'
+import { retrievePayment, selectPayment } from '../reducer/cartSlice'
 
 const PaymentScreen = () => {
 
   const navigation = useNavigation()
   const dispatch = useDispatch()
-
   const payment = useSelector(selectPayment)
 
-  const handleChoose = (id, name, image) => {
-    dispatch(setPayment({id, name, image}))
-    navigation.goBack()
+  const { loadAsh, data } = UseGetPayments()
+
+  const handleChoose = (id, name, tmpName) => {
+    dispatch(retrievePayment({id, name, tmpName}))
   }
 
   return (
@@ -52,39 +42,42 @@ const PaymentScreen = () => {
       <ScrollView className='w-screen h-screen bg-gray-100'>
         <View className='p-4 mt-2'>
           {
-            PaymentData.map((item, index) => (
-              <TouchableOpacity key={index}
-                onPress={() => handleChoose(
-                  item.id, item.paymentName, item.paymentImage
-                )}
-                className={payment.id === item.id ? 
-                  'w-fit bg-green-50 py-4 px-4 rounded-xl border border-[#009245] mb-4 border-l-8' :
-                  'w-fit bg-white py-4 px-4 rounded-xl mb-4'
-                }
-              >
-                <View className='flex-row justify-between items-center'>
-                  <View className='flex-row items-center py-2 w-64'>
-                    <Image
-                      source={require('../assets/img/icons8-atm-96.png')}
-                      style={{
-                        height: 48,
-                        width: 48,
-                        marginRight: 10,
-                      }}
-                    />
+            loadAsh ? (<Text>Load data...</Text>) :
+            (
+              data?.map((item, index) => (
+                <TouchableOpacity key={index}
+                  onPress={() => handleChoose(
+                    item.id, item.paymentName, item.tmpName
+                  )}
+                  className={payment.id === item.id ? 
+                    'w-fit bg-green-50 py-4 px-4 rounded-xl border border-[#009245] mb-4 border-l-8' :
+                    'w-fit bg-white py-4 px-4 rounded-xl mb-4'
+                  }
+                >
+                  <View className='flex-row justify-between items-center'>
+                    <View className='flex-row items-center py-2 w-64'>
+                      <Image
+                        source={{uri: item.paymentImage}}
+                        style={{
+                          height: 48,
+                          width: 48,
+                          marginRight: 10,
+                        }}
+                      />
 
-                    <Text className='text-base'>{item.paymentName}</Text>
+                      <Text className='text-base'>{item.paymentName}</Text>
+                    </View>
+                    <View className='w-fit'>
+                      {
+                        payment.id === item.id ?
+                        <Icons.CheckCircleIcon fill={'#009245'} size={32} /> :
+                        <Icons.MinusCircleIcon fill={'#bababa'} size={32} />
+                      }
+                    </View>
                   </View>
-                  <View className='w-fit'>
-                    {
-                      payment.id === item.id ?
-                      <Icons.CheckCircleIcon fill={'#009245'} size={32} /> :
-                      <Icons.MinusCircleIcon fill={'#bababa'} size={32} />
-                    }
-                  </View>
-                </View>
-              </TouchableOpacity>
-            ))
+                </TouchableOpacity>
+              ))
+            )
           }
         </View>
       </ScrollView>

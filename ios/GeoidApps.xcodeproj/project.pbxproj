@@ -19,6 +19,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		13D15CF6C8714083B23E13F3 /* Asset5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE4EA23556448E95B321D4 /* Asset5.png */; };
 		1872171A291B059B00CA35FF /* hermes.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AAF50A291AF58500F5A862 /* hermes.xcframework */; };
+		18DCD6B929750A04008C0D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		20891D73FBFA4F69A7AEEEB1 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F12EEF7997F74F8184F86E75 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
 		235A79D994594C7FA8524EF4 /* icons8-redeem-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 16F7058F35DD488AA5E47B37 /* icons8-redeem-96.png */; };
 		284B647F2D8E49BDA6B495F1 /* icons8-manual-handling-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0ECE51B35641BF93A9A26F /* icons8-manual-handling-96.png */; };
@@ -39,7 +40,6 @@
 		7699B88040F8A987B510C191 /* libPods-GeoidApps-GeoidAppsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-GeoidApps-GeoidAppsTests.a */; };
 		7D14831A329040009DA5D4E3 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0416639CBA948A3A9AA3BE1 /* PlusJakartaSans-SemiBold.ttf */; };
 		80F5B516F8B94742BD36C1F3 /* icons8-receipt-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F8E9329AB45477AB2A06405 /* icons8-receipt-96.png */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8520E9F1A71243CCA5B50C9B /* sammy-done.png in Resources */ = {isa = PBXBuildFile; fileRef = 78F6C9E6C4744E02BEF5440F /* sammy-done.png */; };
 		943AA70BDE7D4418AF657012 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E4E7DA1C1424B4A9B790DCA /* PlusJakartaSans-ExtraLight.ttf */; };
 		997C40E0DA744C4C84E68900 /* sammy-delivery-with-gps-navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = E062D6441F3C41A5B869B662 /* sammy-delivery-with-gps-navigation.png */; };
@@ -390,7 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				18DCD6B929750A04008C0D8A /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				70E5EF63B108434DAD4A40FB /* PlusJakartaSans-Bold.ttf in Resources */,
 				31B8162C372E4026BFBF7A23 /* PlusJakartaSans-BoldItalic.ttf in Resources */,

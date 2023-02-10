@@ -11,12 +11,9 @@ import { store } from './store'
 
 import * as Icons from 'react-native-heroicons/solid'
 import * as Icon from 'react-native-heroicons/outline'
-import * as Animatable from 'react-native-animatable'
-import { styles } from './fontStyles'
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from 'react-native-linear-gradient'
 
 import HomeScreen from './screens/HomeScreen'
-import SearchScreen from './screens/SearchScreen'
 import CategoryScreen from './screens/CategoryScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -31,6 +28,7 @@ import VoucherScreen from './screens/VoucherScreen'
 import AddressFormScreen from './screens/AddressFormScreen'
 import HistoryScreen from './screens/HistoryScreen'
 import CategoryBrandScreen from './screens/CategoryBrandScreen'
+import SearchScreen from './screens/SearchScreen'
 
 const Stack = createNativeStackNavigator()
 const Tabs  = createBottomTabNavigator()
@@ -251,7 +249,8 @@ function App() {
             <Stack.Screen name='Order' component={OrderScreen} options={{ presentation: 'fullScreenModal', headerShown: false}} />
             <Stack.Screen name='Voucher' component={VoucherScreen} options={{ presentation: 'modal', headerShown: false}} />
             <Stack.Screen name='AddAddress' component={AddressFormScreen} options={{ presentation: 'fullScreenModal', headerShown: false}} />
-      <Stack.Screen name='SelectedBrand' component={CategoryBrandScreen} options={{ presentation: 'fullScreenModal', headerShown: false }} />
+            <Stack.Screen name='SelectedBrand' component={CategoryBrandScreen} options={{ presentation: 'fullScreenModal', headerShown: false }} />
+            <Stack.Screen name='Search' component={SearchScreen} options={{ presentation: 'fullScreenModal', headerShown: false }} />
           </Stack.Navigator>
         </Provider>
       </NavigationContainer>

@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
+import { BASE_URL } from './HooksHelper'
 
-const url = 'https://geoid-dev.taktikid.com/api/vouchers'
 const getVouchers = async (token) => {
-    const response = await fetch(url, {
+    const response = await fetch(`${BASE_URL}/vouchers`, {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + token

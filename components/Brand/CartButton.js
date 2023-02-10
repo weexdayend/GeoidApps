@@ -9,8 +9,8 @@ import * as Icons from 'react-native-heroicons/solid'
 import Currency from 'react-currency-formatter'
 import { styles } from '../../fontStyles'
 
-import { selectBasketDiscount, selectBasketItems, selectBasketTotal } from '../../reducer/basketSlice'
 import { selectLog } from '../../reducer/profileSlice'
+import { selectCartItems, sumTotalDiscount, sumTotalItem, sumTotalPrice } from '../../reducer/cartSlice'
 
 const CartButton = () => {
 
@@ -18,25 +18,11 @@ const CartButton = () => {
   const logUser = useSelector(selectLog)
 
   const [showView, setShowView] = useState(false)
-  const viewAnimate = useRef(null)
 
-  const items = useSelector(selectBasketItems)
-  const basketTotal = useSelector(selectBasketTotal)
-  const basketDiscount = useSelector(selectBasketDiscount) 
-
-  useEffect(() => {
-    const animation = async () => {
-      if(showView){
-        if(viewAnimate.current)
-          await viewAnimate.current.slideInUp(1000);
-      } else {
-        if(viewAnimate.current)
-          await viewAnimate.current.slideOutDown(1000);
-      }
-    }
-
-    animation()
-  }, [showView, viewAnimate])
+  const items = useSelector(selectCartItems)
+  const basketItem = useSelector(sumTotalItem)
+  const basketTotal = useSelector(sumTotalPrice)
+  const basketDiscount = useSelector(sumTotalDiscount) 
   
   useEffect(() => {
     if(items.length > 0){
@@ -47,13 +33,19 @@ const CartButton = () => {
   }, [items.length])
 
   return (
-    <Animatable.View 
-      ref={viewAnimate} 
-      className={showView === true ? 'absolute bottom-0 bg-white w-screen border-t border-[#009245] justify-center' : 'absolute bottom-0 bg-white w-screen'}
+    <Animatable.View
+      className={`absolute bottom-0 bg-white w-screen border-t border-[#009245] justify-center`}
     >
-      <View>
+      <View className='flex-row'>
         <TouchableOpacity
-          className={showView === true ? 'bg-[#009245] mx-4 my-4 mb-8 p-4 rounded-full flex-row items-center' : 'bg-[#009245] mx-4 my-4 p-4 rounded-full flex-row items-center'}
+          onPress={() => navigation.goBack()}
+          className={`w-20 ${showView ? 'bg-[#31704f]' : 'bg-[#009245]'} ml-4 my-4 mb-8 p-4 pl-6 rounded-l-full flex-row items-center`}
+        >
+          <Icons.ArrowLeftIcon fill={'#ffffff'} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          disabled={showView ? false : true}
+          className={showView === true ? 'flex-1 bg-[#009245] mr-4 my-4 mb-8 p-4 rounded-r-full flex-row items-center' : 'flex-1 bg-[#767676] mr-4 my-4 mb-8 p-4 rounded-r-full flex-row items-center'}
           onPress={() => {
             if(logUser === false){
               navigation.navigate('Login')
@@ -63,13 +55,12 @@ const CartButton = () => {
           }}
         >
           <View className='flex-1 ml-4'>
-            <Text style={styles.Regu} className='text-white text-xs text-left'>Subtotal ({items.length})</Text>
+            <Text style={styles.Regu} className='text-white text-xs text-left'>({basketItem} items)</Text>
             <Text style={styles.Bold} className='text-white text-base text-left'>
               <Currency quantity={basketTotal-basketDiscount} currency="IDR" pattern="##,### " />
             </Text>
           </View>
           <View className='flex-row items-center mr-2'>
-            <Text style={styles.Regu} className='text-white text-base mr-2 leading-4'>Keranjang</Text>
             <Icons.ChevronRightIcon fill={'#ffffff'} />
           </View>
         </TouchableOpacity>

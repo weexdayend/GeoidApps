@@ -5,11 +5,16 @@ import * as Animatable from 'react-native-animatable'
 import { styles } from '../fontStyles'
 import { useNavigation } from '@react-navigation/native'
 
+import { useDispatch } from 'react-redux'
+import { clearAll } from '../reducer/cartSlice'
+
 const PlacingScreen = () => {
 
   const navigation = useNavigation();
+  const dispatch = useDispatch()
 
   useEffect(() => {
+    dispatch(clearAll())
     setTimeout(() => {
       navigation.navigate('Order')
     }, 5000)

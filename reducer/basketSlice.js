@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     items: [],
     address: [],
-    deliveryMethod: 'Delivery Order',
+    deliveryMethod: 'Delivery',
     payment: [],
     voucher: [],
 }
@@ -17,7 +17,7 @@ export const basketSlice = createSlice({
         },
         removeFromBasket: (state, action) => {
             const index = state.items.findIndex(
-                (item) => item.id === action.payload.id
+                (item) => item.productID === action.payload.id
             );
 
             let newBasket = [...state.items];

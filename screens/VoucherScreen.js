@@ -1,40 +1,17 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import * as Icons from 'react-native-heroicons/solid'
+import Currency from 'react-currency-formatter'
 import { styles } from '../fontStyles'
 
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
-import { setVoucher, selectVoucher, selectMethod, removeVoucher } from '../reducer/basketSlice'
 import { UseGetVouchers } from '../components/Hooks/getVouchers'
+import { retreiveVoucher, removeVoucher, selectMethod, selectVoucher } from '../reducer/cartSlice'
 import { selectToken } from '../reducer/profileSlice'
 
-const VoucherData = [
-  {
-    id: 1,
-    voucherName: '50% off up to 500k',
-    voucherDescription: '50% discount up to 500k',
-    voucherMin: 'Min. order 1000k',
-    voucherMax: 'Max. discount 500k',
-    voucherDiscount: 500000,
-    voucherType: 'Delivery Order',
-    voucherAvailable: 'Limited availability',
-  }, 
-  {    
-    id: 2,
-    voucherName: '65% off up to 500k',
-    voucherDescription: '65% discount up to 500k',
-    voucherMin: 'Min. order 1550k',
-    voucherMax: 'Max. discount 500k',
-    voucherDiscount: 500000,
-    voucherType: 'Pickup Order',
-    voucherAvailable: 'Limited availability',
-  },
-]
-
 const VoucherScreen = () => {
-
 
   const token = useSelector(selectToken)
   const { loadAsh, data } = UseGetVouchers(token)
@@ -48,7 +25,18 @@ const VoucherScreen = () => {
   const [selected, isSelected] = useState()
 
   const handleChoose = (id, name, description, min, max, discount, type, available) => {
-    dispatch(setVoucher({id, name, description, min, max, discount, type, available}))
+    let newBody = {
+      idCart: '0',
+      productType: 'Voucher',
+      productId: id,
+      productName: name,
+      productDescription: description,
+      productPrice: String(-max),
+      productDiscount: 0,
+      productItem: '1',
+      productUnit: '-'
+    }
+    dispatch(retreiveVoucher(newBody))
     isSelected(true)
   }
 
@@ -57,8 +45,8 @@ const VoucherScreen = () => {
     isSelected(!selected)
   }
 
-  useLayoutEffect(() => {
-    if(voucher.id != null){
+  useEffect(() => {
+    if(voucher.productId != null){
       isSelected(true)
     } else {
       isSelected(false)
@@ -122,10 +110,10 @@ const VoucherScreen = () => {
                   className='w-fit mb-6'
                 >
                   <View className={
-                    voucher.id === item.id ? 'bg-[#009245] rounded-2xl ' : null
+                    voucher.productId === item.id ? 'bg-[#009245] rounded-2xl ' : null
                   }>
                     {
-                      voucher.id === item.id ?
+                      voucher.productId === item.id ?
                       <View className='px-6 py-2 flex-row items-center space-x-2'>
                         <Text style={styles.Bold} className='text-sm text-white'>Applied</Text>
                         <Icons.CheckCircleIcon fill={'#ffffff'} size={20} />
@@ -138,15 +126,17 @@ const VoucherScreen = () => {
                         <Text style={styles.Bold} className='text-lg'>{item.voucherName}</Text>
                         <View className='p-4'>
                           <Text style={styles.Regu} className='text-base'>{item.voucherDescription}</Text>
-                          <Text style={styles.Regu} className='text-base'>{item.voucherMin}</Text>
-                          <Text style={styles.Regu} className='text-base'>{item.voucherMax}</Text>
+                          <Text style={styles.Regu} className='text-base'>
+                            Min. Order <Currency quantity={Number(item.voucherMin)} currency="IDR" pattern=" ##,### " />
+                          </Text>
+                          <Text style={styles.Regu} className='text-base'>
+                            Max. Discount <Currency quantity={Number(item.voucherMax)} currency="IDR" pattern=" ##,### " />
+                          </Text>
+
+                          <Text style={styles.Semi} className='text-sm text-zinc-700 pt-5'>Berlaku sampai {item.exp_date}</Text>
                         </View>
   
                         <View className='flex-row items-center justify-between py-4'>
-                          <View className='flex-row items-center space-x-2'>
-                            <Icons.ClockIcon fill={'#3f3f46'} />
-                            <Text style={styles.Semi} className='text-sm text-zinc-700'>{item.voucherAvailable}</Text>
-                          </View>
                           {
                             method === item.voucherType &&
                             <RenderButton item={item} />
@@ -154,10 +144,10 @@ const VoucherScreen = () => {
                         </View>
                       </View>
   
-                      <View className='flex-row px-6 py-4 items-center'>
+                      <View className='flex-row px-6 py-4 items-center space-x-2'>
                         <View className='flex-row items-center rounded-full bg-white border border-gray-300 py-1 px-4 space-x-2'>
                           {
-                            item.voucherType === 'Delivery Order' ?
+                            item.voucherType === 'Delivery' ?
                             <Image
                               source={require('../assets/img/icons8-in-transit-96.png')}
                               style={{
@@ -175,6 +165,10 @@ const VoucherScreen = () => {
                             />
                           }
                           <Text style={styles.Semi} className='text-sm'>{item.voucherType}</Text>
+                        </View>
+                        <View className='flex-row items-center rounded-full bg-white border border-gray-300 py-1 px-4 space-x-1'>
+                          <Icons.ClockIcon />
+                          <Text>{item.maxUsage}x Pemakaian</Text>
                         </View>
                       </View>
                     </View>

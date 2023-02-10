@@ -1,6 +1,6 @@
-import { useQuery, useMutation } from '@tanstack/react-query'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import { BASE_URL } from './HooksHelper'
 
-const cartUrl = 'https://geoid-dev.taktikid.com/api/carts'
 const options = (method, id, type, token) => {
     let headers = {}
     let body = { productId: id, typeProduct: type, item: '1' }
@@ -43,7 +43,7 @@ const options = (method, id, type, token) => {
 }
 
 const getCart = async (token) => {
-    const response = await fetch(cartUrl, {
+    const response = await fetch(`${BASE_URL}/carts`, {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + token
@@ -56,12 +56,12 @@ const getCart = async (token) => {
 }
 
 export const UseGetCart = (token) => {
-    const { isLoading, data } = useQuery(['user-cart'], () => getCart(token))
-    return { loadAsh: isLoading, data }
+    const { isLoading, data, isSuccess, isRefetching } = useQuery(['user-cart'], () => getCart(token))
+    return { loadAsh: isLoading, data, isSuccess, isRefetching }
 }
 
 const addCart = async ({id, type, token}) => {
-    const response = await fetch(cartUrl+'/add', options('POST', id, type, token))
+    const response = await fetch(`${BASE_URL}/carts/add`, options('POST', id, type, token))
     .then((response) => response.json()).then((json) => {
         return json
     })
@@ -69,14 +69,21 @@ const addCart = async ({id, type, token}) => {
 }
 
 export const UseAddCart = () => {
-    const { mutate } = useMutation(['add-cart'], {
-        mutationFn: (data) => addCart(data)
+    const clientQuery = useQueryClient()
+
+    const { mutate, status } = useMutation({
+        mutationFn: (data) => addCart(data),
+        onSuccess: () => {
+            return clientQuery.invalidateQueries({
+                queryKey: ['user-cart'],
+            })
+        }
     })
-    return { addItem: mutate }
+    return { addItem: mutate, statusAdd: status }
 }
 
 const deleteCart = async ({id, type, token}) => {
-    const response = await fetch(cartUrl+'/dell', options('DELETE', id, type, token))
+    const response = await fetch(`${BASE_URL}/carts/dell`, options('DELETE', id, type, token))
     .then((response) => response.json()).then((json) => {
         return json
     })
@@ -84,8 +91,15 @@ const deleteCart = async ({id, type, token}) => {
 }
 
 export const UseDeleteCart = () => {
-    const { mutate } = useMutation(['delete-cart'], {
-        mutationFn: (data) => deleteCart(data)
+    const clientQuery = useQueryClient()
+
+    const { mutate, status } = useMutation({
+        mutationFn: (data) => deleteCart(data),
+        onSuccess: () => {
+            return clientQuery.invalidateQueries({
+                queryKey: ['user-cart'],
+            })
+        }
     })
-    return { deleteItem: mutate }
+    return { deleteItem: mutate, statusDelete: status }
 }

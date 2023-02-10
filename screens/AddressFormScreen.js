@@ -15,10 +15,12 @@ import * as Yup from 'yup'
 import * as Icons from 'react-native-heroicons/solid'
 import { styles } from '../fontStyles';
 import { useNavigation } from '@react-navigation/native';
+import { BASE_URL } from '../components/Hooks/HooksHelper';
+import { UseAddUserAddress } from '../components/Hooks/getUserAddress';
 
 const AddressFormScreen = () => {
 
-  const url = 'https://geoid-dev.taktikid.com/api/'
+  const url = 'https://geoid-dev.caricuan.tech/api/'
   const navigation = useNavigation()
 
   const [listCities, setListCities] = useState([])
@@ -34,6 +36,7 @@ const AddressFormScreen = () => {
   const [selectedArea, setSelectedAera] = useState('')
   const [selectedDistrict, setSelectedDistrict] = useState('')
 
+  const { mutate, isSuccess } = UseAddUserAddress()
 
   const AddressScheme = Yup.object().shape({
     recipientname: 
@@ -44,11 +47,6 @@ const AddressFormScreen = () => {
     address:
       Yup.string()
       .required('Alamat lengkap harus di isi ya!'),
-    hp:
-      Yup.string()
-      .min(10, 'Nomor telepon minimal 10 karakter!')
-      .max(13, 'Waduh username kamu terlalu panjang!')
-      .required('Nomor telepon harus di isi ya!'),
   });
 
   // ref
@@ -64,47 +62,34 @@ const AddressFormScreen = () => {
   }, []);
 
   const handleSubmit = async (data) => {
-    const dataToken = await AsyncStorage.getItem('_logtoken')
+    const dataToken = await AsyncStorage.getItem('_data-user')
     const tokenData = JSON.parse(dataToken)
 
     let datas = { 
-      recipientname: data.recipientname,
-      hp: data.hp,
-      address: data.address,
-      codeCities: selectedCities.id,
-      codeSubdistrict: selectedArea.id,
-      codeWard: selectedDistrict.id,
-      postalCode: selectedDistrict.code,
+      data: {
+        recipientname: data.recipientname,
+        address: data.address,
+        codeCities: selectedCities.id,
+        codeSubdistrict: selectedArea.id,
+        codeWard: selectedDistrict.id,
+        postalCode: selectedDistrict.code,
+      },
+      token: tokenData.token
     }
 
-    try {
-      fetch(url + '/users/address', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          'Authorization' : 'Bearer ' + tokenData
-        },
-        body: JSON.stringify(datas)
-      })
-      .then((response) => response.json())
-      .then(({code}) => {
-        if(code === 200){
-          Alert.alert(
-            "Yeayy!",
-            "Alamat kamu berhasil disimpan!",
-            [
-              {
-                text: 'Lanjut belanja!',
-                onPress: () => navigation.goBack(),
-                style: 'cancel',
-              },
-            ]
-          )
-        }
-      })
-    } catch(e) {
-      console.log(e)
+    mutate(datas)
+    if(isSuccess){
+      Alert.alert(
+        "Yeayy!",
+        "Alamat kamu berhasil disimpan!",
+        [
+          {
+            text: 'Lanjut belanja!',
+            onPress: () => navigation.goBack(),
+            style: 'cancel',
+          },
+        ]
+      )
     }
 
     if(!selectedCities && !selectedArea && !selectedDistrict){
@@ -344,7 +329,7 @@ const AddressFormScreen = () => {
               {({ touched, values, errors, handleChange, handleBlur, handleSubmit }) => (
                 <View className='w-fit'>
                   <View className='mt-5 mb-2'>
-                    <Text style={styles.Regu} className='text-md mb-2'>Nama Penerima</Text>
+                    <Text style={styles.Regu} className='text-md mb-2'>Nama Tempat</Text>
                     <View className='bg-gray-200 rounded-full px-4'>
                       <TextInput
                         placeholder='Nama Penerima'
@@ -360,27 +345,6 @@ const AddressFormScreen = () => {
                       {
                         touched.recipientname && errors.recipientname &&
                         <Text style={styles.Regu} className='mt-2 text-red-500'>{errors.recipientname}</Text>
-                      }
-                    </View>
-                  </View>
-
-                  <View className='mb-2'>
-                    <Text style={styles.Regu} className='text-md mb-2'>Nomor Telepon</Text>
-                    <View className='bg-gray-200 rounded-full px-4'>
-                      <TextInput
-                        placeholder='Nomor telepon penerima'
-                        placeholderTextColor={'#787878'}
-                        onChangeText={handleChange('hp')}
-                        onBlur={handleBlur('hp')}
-                        value={values.hp}
-                        style={styles.Regu}
-                        className='p-4'
-                      />
-                    </View>
-                    <View className='h-10 px-4'>
-                      {
-                        touched.hp && errors.hp &&
-                        <Text style={styles.Regu} className='mt-2 text-red-500'>{errors.hp}</Text>
                       }
                     </View>
                   </View>

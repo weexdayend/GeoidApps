@@ -1,7 +1,7 @@
-const loginUrl = 'https://geoid.taktikid.com/api/users/'
+import { BASE_URL } from "./HooksHelper"
 
 export const login = async (data) => {   
-    const response = await fetch(loginUrl+'login', {
+    const response = await fetch(`${BASE_URL}/users/login`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -15,7 +15,7 @@ export const login = async (data) => {
 }
 
 export const logout = async (token) => {
-    const response = await fetch(loginUrl+'logout', {
+    const response = await fetch(`${BASE_URL}/users/logout`, {
         method: 'POST',
         headers: {
             'Authorization' : 'Bearer ' + token

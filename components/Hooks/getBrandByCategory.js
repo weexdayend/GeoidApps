@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
+import { BASE_URL } from './HooksHelper'
 
-const brandCategoryUrl = 'https://geoid-dev.taktikid.com/api/categories/'
 const getBrandCategory = async (id) => {
-    const response = await fetch(brandCategoryUrl+id+'/brands', {
+    const response = await fetch(`${BASE_URL}/categories/${id}/brands`, {
         method: 'GET',
     }).then((response) => response.json()).then(({data}) => {
         return data
